@@ -55,7 +55,8 @@ class test_BaseModel(unittest.TestCase):
         value_created_at = user.created_at.isoformat()
         value_updated_at = user.updated_at.isoformat()
         value_class = user.__class__.__name__
-        mydict ={'id': value_id, 'created_at': value_created_at, 'updated_at': value_updated_at, '__class__': value_class}
+        mydict = {'id': value_id, 'created_at': value_created_at, 'updated_at': value_updated_at,
+                  '__class__': value_class}
         actual_dict = user.to_dict()
         self.assertDictEqual(actual_dict, mydict)
 
