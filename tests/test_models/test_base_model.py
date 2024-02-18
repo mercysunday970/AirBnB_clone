@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import unittest
 from datetime import datetime
-from models import base_model
+from models.base_model import BaseModel
 
 
 class test_BaseModel(unittest.TestCase):
@@ -16,7 +16,7 @@ class test_BaseModel(unittest.TestCase):
         of the BaseModel class
         """
         # to test if a BaseModel is initiated
-        user = base_model.BaseModel()
+        user = BaseModel()
         self.assertTrue(hasattr(user, "created_at"))
         self.assertTrue(hasattr(user, "updated_at"))
         self.assertTrue(hasattr(user, "id"))
@@ -25,7 +25,7 @@ class test_BaseModel(unittest.TestCase):
         user_dict = user.to_dict()
 
         # to test if a BaseModel is initiated using kwargs
-        my_new_user = base_model.BaseModel(**user_dict)
+        my_new_user = BaseModel(**user_dict)
         self.assertTrue(hasattr(my_new_user, "created_at"))
         self.assertTrue(hasattr(my_new_user, "updated_at"))
         self.assertTrue(hasattr(my_new_user, "id"))
@@ -37,8 +37,8 @@ class test_BaseModel(unittest.TestCase):
         unit test for the save method of
         the BaseModel class
         """
-        user = base_model.BaseModel()
-        user.updated_at = datetime(2018, 2, 28, 2, 6, 55,  258896)
+        user = BaseModel()
+        user.updated_at = datetime(2019, 2, 28, 2, 6, 55,  258896)
         date1 = user.updated_at
         user.save()
         date2 = user.updated_at
