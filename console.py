@@ -9,7 +9,7 @@ class HBNBCommand(cmd.Cmd):
     Attributes:
         prompt (str): The command prompt.
     """
-    
+
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
