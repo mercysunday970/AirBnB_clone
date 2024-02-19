@@ -4,6 +4,7 @@ import cmd
 from models import storage
 from models.base_model import BaseModel
 
+
 class HBNBCommand(cmd.Cmd):
     """Defines the HolbertonBnB command interpreter.
 
@@ -27,7 +28,7 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing on empty line"""
         pass
 
-def do_create(self, arg):
+    def do_create(self, arg):
         """Usage: create <class>
         Create a new class instance and print its id.
         """
