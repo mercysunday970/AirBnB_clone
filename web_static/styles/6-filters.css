@@ -1,0 +1,23 @@
+.filters.popover {
+    background-color: #FAFAFA;
+    width: 25%;
+    border: #DDDDDD solid 1px;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+}
+.filters.locations:hover .popover,
+.filters.amenities:hover .popover {
+    display: block;
+}
+.filters .locations li {
+  margin: 0 auto 6px 3em;
+  list-style: none;
+}
+.filters .amenities li {
+  margin: 12px auto 12px 30px;
+  list-style: none;
+}
+.filters h2 {
+    font-size: 16px;
+}
