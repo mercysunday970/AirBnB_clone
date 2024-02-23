@@ -16,7 +16,7 @@ This is the console/command interpreter for the Holberton Airbnb clone project. 
 * all - show all objects, of one type or all types
 * quit/EOF - quit the console
 * help - see descriptions of commands
-To start, navigate to the project folder and enter ./console.py in the shell.
+To start, navigate to the project folder and enter ./console.py in the shell. Wish you the Best.
 
 #### Create
 ```create <class name>``` Ex: ```create BaseModel```
