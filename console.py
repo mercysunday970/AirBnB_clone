@@ -19,7 +19,6 @@ class HBNBCommand(cmd.Cmd):
         prompt (str): The command prompt.
     """
 
-    prompt = '(hbnb) '
     prompt = "(hbnb) "
     my_class = {
         "BaseModel",
