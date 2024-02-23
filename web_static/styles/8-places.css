@@ -1,0 +1,63 @@
+.places .price_by_night {
+    color: #FF5A5F;
+    border: #FF5A5F solid 4px;
+    border-radius: 50%;
+    min-width: 60px;
+    height: 60px;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.places .information {
+    height: 80px;
+    border-top: #DDDDDD solid 1px;
+    border-bottom: #DDDDDD solid 1px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.max_guest, .number_rooms, .number_bathrooms {
+    width: 100px;
+    line-height: 0;
+    display: inline-block;
+    text-align: center;
+}
+.guest_icon {
+    display: inline-block;
+    background-image: url("../images/guest.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 30px;
+}
+.bed_icon {
+    display: inline-block;
+    background-image: url("../images/bed.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 30px;
+}
+.bathroom_icon {
+    display: inline-block;
+    background-image: url("../images/bath.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 30px;
+}
+.user {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.description {
+    text-align: left;
+}
+strong {
+    font-weight: bold;
+}
