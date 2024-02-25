@@ -2,7 +2,7 @@
 """Defines the HBnB console."""
 import cmd
 from models.base_model import BaseModel
-import models
+import models import storage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -13,6 +13,7 @@ class HBNBCommand(cmd.Cmd):
     """
 
     prompt = "(hbnb) "
+    class_list = {"BaseModel"}
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
