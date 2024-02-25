@@ -13,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
     """
 
     prompt = "(hbnb) "
-    class_list = {"BaseModel"}
+    my_list = {"BaseModel"}
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         """Create command to create a new instance of BaseModel."""
         if not arg:
             print("** class name missing **")
-        elif arg not in models.class_list:
+        elif arg not in models.my_list:
             print("** class doesn't exist **")
         else:
             new_instance = BaseModel()
@@ -44,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if not arg:
             print("** class name missing **")
-        elif args[0] not in models.class_list:
+        elif args[0] not in models.my_list:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
@@ -60,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if not arg:
             print("** class name missing **")
-        elif args[0] not in models.class_list:
+        elif args[0] not in models.my_list:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
@@ -80,7 +80,7 @@ class HBNBCommand(cmd.Cmd):
             for obj in models.storage.all().values():
                 objs.append(str(obj))
             print(objs)
-        elif args[0] not in models.class_list:
+        elif args[0] not in models.my_list:
             print("** class doesn't exist **")
         else:
             for key, value in models.storage.all().items():
@@ -93,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if not arg:
             print("** class name missing **")
-        elif args[0] not in models.class_list:
+        elif args[0] not in models.my_list:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
