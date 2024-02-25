@@ -5,12 +5,12 @@ from models import storage
 from models.base_model import BaseModel
 import shlex
 
+
 class HBNBCommand(cmd.Cmd):
     """Command processor"""
 
     prompt = "(hbnb) "
     my_class = ['BaseModel']
-
 
     def emptyline(self):
         """Do nothing on empty line"""
