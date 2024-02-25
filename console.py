@@ -2,7 +2,7 @@
 """Defines the HBnB console."""
 import cmd
 from models.base_model import BaseModel
-import models import storage
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
