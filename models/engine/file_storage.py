@@ -1,13 +1,7 @@
 #!/usr/bin/python3
 """Defines the FileStorage class."""
 import json
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
-from models.place import Place
-from models.amenity import Amenity
-from models.review import Review
+import os
 
 
 class FileStorage:
@@ -39,13 +33,13 @@ class FileStorage:
             json.dump(m_dict, f)
 
     def reload(self):
-        """Deserialize the JSON file __file_path to __objects, if it exists."""
-        try:
-            with open(FileStorage.__file_path) as f:
-                obj_dict = json.load(f)
-                for o in obj_dict.values():
-                    cls_name = o["__class__"]
-                    del o["__class__"]
-                    self.new(eval(cls_name)(**o))
-        except FileNotFoundError:
-            return
+        """ Deserializes __objects from the JSON file """
+        from models.base_model import BaseModel
+        from models.user import User
+
+        d__ct = {'BaseModel': BaseModel, 'User': User}
+
+        if os.path.exists(FileStorage.__file_path) is True:
+            with open(FileStorage.__file_path, 'r') as f:
+                for key, value in json.load(f).items():
+                    self.new(d__ct[value['__class__']](**value))
