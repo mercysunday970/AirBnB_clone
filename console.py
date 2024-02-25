@@ -3,6 +3,7 @@
 import cmd
 from models import storage
 from models.base_model import BaseModel
+from models.user import User
 import shlex
 
 
@@ -10,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     """Command processor"""
 
     prompt = "(hbnb) "
-    my_class = ['BaseModel']
+    my_class = ['BaseModel', 'User']
 
     def emptyline(self):
         """Do nothing on empty line"""
@@ -24,7 +25,7 @@ class HBNBCommand(cmd.Cmd):
         elif arg not in HBNBCommand.my_class:
             print("** class doesn't exist **")
         else:
-            my_dict = {'BaseModel': BaseModel}
+            my_dict = {'BaseModel': BaseModel, 'User': User}
             my_model = my_dict[arg]()
             print(my_model.id)
             my_model.save()
